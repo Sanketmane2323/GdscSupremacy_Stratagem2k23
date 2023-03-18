@@ -18,12 +18,15 @@
 
 <body class="text-center">
 
-    <form class="form-signin" method="post" action="/login" enctype="multipart/form-data">
+    <form class="form-signin" method="post" action="/register" enctype="multipart/form-data">
         <div class="card">
             <div class="card-body">
                 <img class="mb-4" src="{{ url_for('static' , filename='/img/logo_blue.jpeg') }}" alt="" width="120"
                     height="120">
                 <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+                <label for="name" class="sr-only">Hospital Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Type your hospital name" required
+                    autofocus>
                  <label for="email" class="sr-only">Hospital Email</label>
                 <input type="text" id="email" name="email" class="form-control" placeholder="Type your email here" required
                     autofocus>

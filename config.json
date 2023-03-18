@@ -1,8 +1,8 @@
 {
     "params":
     {
-        "app_name" : "EduTube",
-        "tagline" : "Get Certifications for learning from youtube",
+        "app_name" : "Hospitalify",
+        "tagline" : "AI face recognition token booking",
         "login_img" : "logo_blue.png",
 
         "admin_name" : "Admin",

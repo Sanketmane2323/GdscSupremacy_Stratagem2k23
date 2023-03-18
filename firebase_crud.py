@@ -75,7 +75,7 @@ def fetchProperty(id):
 
 
 def fetchUser(id):
-    user_ref = db.collection("Users").document(id).get()
+    user_ref = db.collection("hospitals").document(id).get()
     user = user_ref.to_dict()
     user["id"] = user_ref.id
     return user
