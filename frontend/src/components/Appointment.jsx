@@ -1,3 +1,4 @@
+import '../css/appointment.css'
 import {
   addDoc,
   collection,
@@ -7,6 +8,7 @@ import {
 } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import { auth, db } from "../lib/firebase";
+
 
 // Get a reference to the Firestore collection we want to write to
 const appointmentsCollection = collection(db, "appointments");
@@ -70,9 +72,14 @@ export default function Appointment() {
   }
 
   return (
-    <div className="container mx-auto">
-      <h2 className="text-2xl font-bold">Book Appointment</h2>
-      <form onSubmit={handleSubmit}>
+    <div className='background '>
+      <br />
+      <br />
+       <div className="container mx-auto ">
+      <h2 className="text-2xl font-bold centxt">Book Appointment</h2>
+      <br />
+      <form onSubmit={handleSubmit} class="itemms">
+      
         <div className="form-control">
           <label className="label">Date</label>
           <input
@@ -83,7 +90,10 @@ export default function Appointment() {
             required
           />
         </div>
-        <div className="form-control">
+
+        <br />
+
+        <div className="form-control ">
           <label className="label">Time</label>
           <input
             className="input input-bordered"
@@ -93,7 +103,10 @@ export default function Appointment() {
             required
           />
         </div>
-        <div className="form-control">
+
+        <br />
+
+        <div className="form-control ">
           <label className="label">Department</label>
           <input
             className="input input-bordered"
@@ -103,14 +116,34 @@ export default function Appointment() {
             required
           />
         </div>
-        <div className="form-control mt-4">
+       
+        
+        <div className="form-control mt-4 btn">
+        
           <button className="btn btn-primary w-full" type="submit">
             Book Appointment
+           
           </button>
+          
         </div>
+        
+       
       </form>
-      {successMessage && <p>{successMessage}</p>}
-      {errorMessage && <p>{errorMessage}</p>}
+      <br/>
+      <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+  <div class="flex">
+    <div class="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+    <div>
+      <p class="font-bold">{successMessage && <p>{successMessage}</p>}
+      {errorMessage && <p>{errorMessage}</p>}</p>
+      
+      <br /><br />
+      
     </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
   );
 }

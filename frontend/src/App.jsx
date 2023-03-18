@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Dashboard from './pages/Dashboard';
 import {
   Routes,
   Route,
@@ -39,6 +40,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </>
   );

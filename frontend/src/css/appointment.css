@@ -1,0 +1,27 @@
+*{
+    margin: 10px;
+    
+}
+.background {
+    background-color: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.centxt {
+    text-align: center;
+}
+
+.itemms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn {
+    background-color:  rgb(188, 188, 240);
+}
+ body {
+    background-color:rgb(244, 225, 228);
+ }
